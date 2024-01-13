@@ -1,6 +1,6 @@
 local on_attach = function(client, bufnr)
 	local function buf_set_keymap(...)
-		vim.api.nvim_buf_set_keymap(bufnr,...)
+		vim.api.nvim_buf_set_keymap(bufnr, ...)
 	end
 	local function buf_set_option(...)
 		vim.api.nvim_buf_set_option(bufnr, ...)
@@ -21,7 +21,7 @@ local on_attach = function(client, bufnr)
 	buf_set_keymap("n", "[d", ":lua vim.diagnostic.goto_prev()<CR>", opts)
 	buf_set_keymap("n", "]d", ":lua vim.diagnostic.goto_next()<CR>", opts)
 	buf_set_keymap("n", "<leader>lq", ":lua vim.diagnostic.setloclist()<CR>", opts)
-	buf_set_keymap("n", "<leader>lf", ":lua vim.lsp.buf.formatting()<CR>", opts)
+	buf_set_keymap("n", "<leader>lf", ":lua vim.lsp.buf.format()<CR>", opts)
 end
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()
