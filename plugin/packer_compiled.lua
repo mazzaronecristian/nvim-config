@@ -99,6 +99,11 @@ _G.packer_plugins = {
     path = "/home/cristian/.local/share/nvim/site/pack/packer/start/gruvbox",
     url = "https://github.com/ellisonleao/gruvbox.nvim"
   },
+  harpoon = {
+    loaded = true,
+    path = "/home/cristian/.local/share/nvim/site/pack/packer/start/harpoon",
+    url = "https://github.com/ThePrimeagen/harpoon"
+  },
   ["lspkind-nvim"] = {
     loaded = true,
     path = "/home/cristian/.local/share/nvim/site/pack/packer/start/lspkind-nvim",

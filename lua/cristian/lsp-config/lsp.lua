@@ -30,17 +30,20 @@ capabilities = require("cmp_nvim_lsp").default_capabilities(capabilities)
 
 require("lspconfig")["pyright"].setup({
 	on_attach = on_attach,
-	capabilities = capabilities
+	capabilities = capabilities,
+	filetypes = { "python" }
 })
 
 require("lspconfig")["cssls"].setup({
 	on_attach = on_attach,
-	capabilities = capabilities
+	capabilities = capabilities,
+	filetypes = { "css", "scss" }
 })
 
 require("lspconfig")["tsserver"].setup({
 	on_attach = on_attach,
-	capabilities = capabilities
+	capabilities = capabilities,
+	filetypes = { "javascript", "typescript", "typescriptreact" }
 })
 
 require("lspconfig")["lua_ls"].setup({
