@@ -19,5 +19,5 @@ vim.keymap.set('n', 'n', "nzzzv")
 vim.keymap.set('n', 'N', "Nzzzv")
 
 vim.keymap.set("n", "<leader><leader>", function()
-    vim.cmd("so")
+	vim.cmd("so")
 end)
