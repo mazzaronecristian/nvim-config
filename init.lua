@@ -9,6 +9,20 @@ vim.cmd("set smarttab")
 vim.cmd("set softtabstop=2")
 vim.cmd("set mouse=a")
 
+--clipboard win32yank.exe
+vim.opt.clipboard = "unnamedplus"
+vim.g.clipboard = {
+	name = "win32yank",
+	copy = {
+		["+"] = "win32yank.exe -i --crlf",
+		["*"] = "win32yank.exe -i --crlf",
+	},
+	paste = {
+		["+"] = "win32yank.exe -o --lf",
+		["*"] = "win32yank.exe -o --lf",
+	},
+	cache_enabled = 0,
+}
 --colorscheme: catppuccin
 vim.cmd("colorscheme catppuccin")
 
